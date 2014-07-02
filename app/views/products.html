@@ -1,12 +1,12 @@
 <html ng-app="ngKatApp">
-<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
 </head>
+<body>
 <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
+          <li class="active"><a ng-href="#/main">Home</a></li>
           <li><a ng-href="#/about">About</a></li>
           <li><a ng-href="#/contact">Contact</a></li>
           <li><a ng-href="#/customers">Customers</a></li>
@@ -14,13 +14,12 @@
         </ul>
         <h3 class="text-muted">ngKat</h3>
       </div>
-<body>
 	<div class='container'
-		ng-init="products=[{name:'',city: 'Phoenix'}, {name:'Katherine Mattison',city: 'NYC'}, {name:'Vinnie Kitts',city: 'Chicago'}, {name:'Jack Mattison',city: 'Charleston'}]">
+		ng-init="products=[{name:'Ball of Fire',price: '$2000'}, {name:'Fiery Umbrella',price: '$3000'}, {name:'Kissing The Lipless',price: '$1000'}, {name:'Lonely Queen',price: '$5000'}]">
 	<br />
-	<h3>Customer Names</h3>
+	<h3>Art Pieces</h3>
 	<!-- <input type="text" ng-model="name" /> {{name}}
- -->	<br />
+ -->	<br/>
 
 	<!-- <ul>
 		<li ng-repeat="cust in customers | orderBy:'name'">{{ cust.name | uppercase }}</li> 
@@ -28,11 +27,14 @@
 
 	<input type="text" ng-model="nameText" />
 	<ul>
-		<li ng-repeat="cust in customers | filter:nameText | orderBy: 'name'">
-			{{cust.name}} - {{cust.city}}</li>
+		<li ng-repeat="product in products | filter:nameText | orderBy: 'name'">
+			{{product.name}} - {{product.price}} </li>
 	</ul>
 	
 	</div>
+
+	<ul>
+		<li <a href="/images/balloffiremodel.jpg"></a> </li>
 	
 </body>
 </html>
