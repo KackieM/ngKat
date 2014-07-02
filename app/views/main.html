@@ -1,0 +1,45 @@
+<html ng-app="ngKatApp">
+<div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#/about">About</a></li>
+          <li><a ng-href="#/contact">Contact</a></li>
+          <li><a ng-href="#/customers">Customers</a></li>
+          <li><a ng-href="#/products">Products</a></li>
+        </ul>
+        <h3 class="text-muted">ngKat</h3>
+      </div>
+<div class="jumbotron">
+  <h1>Art Shop</h1>
+  <p class="lead">
+    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
+   
+  </p>
+  <p><a class="btn btn-lg btn-default" ng-href="#">Lovely Day!
+    <span class="glyphicon glyphicon-eye-open"></span></a></p>
+</div>
+<body data-ng-init="customers=">
+  <h3>Customer Names</h3>
+  <br />
+  <input type="text" ng-model="nameText" /> {{ name }}
+  <br />
+  <ul>
+
+    <li ng-repeat="cust in customers"> {{ cust.name }} - {{ cust.city}}</li>
+
+  </ul>
+  <br />
+    
+  
+   
+   
+  <ul>
+    <li ng-repeat="cust in customers | filter:nameText | orderBy: 'name'">
+      {{ cust.name }} - {{ cust.city }}</li>
+
+  </ul>
+  
+  <br />
+
+</body>
+</html>

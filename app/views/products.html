@@ -1,0 +1,38 @@
+<html ng-app="ngKatApp">
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#/about">About</a></li>
+          <li><a ng-href="#/contact">Contact</a></li>
+          <li><a ng-href="#/customers">Customers</a></li>
+          <li><a ng-href="#">Products</a></li>
+        </ul>
+        <h3 class="text-muted">ngKat</h3>
+      </div>
+<body>
+	<div class='container'
+		ng-init="products=[{name:'',city: 'Phoenix'}, {name:'Katherine Mattison',city: 'NYC'}, {name:'Vinnie Kitts',city: 'Chicago'}, {name:'Jack Mattison',city: 'Charleston'}]">
+	<br />
+	<h3>Customer Names</h3>
+	<!-- <input type="text" ng-model="name" /> {{name}}
+ -->	<br />
+
+	<!-- <ul>
+		<li ng-repeat="cust in customers | orderBy:'name'">{{ cust.name | uppercase }}</li> 
+	</ul> -->
+
+	<input type="text" ng-model="nameText" />
+	<ul>
+		<li ng-repeat="cust in customers | filter:nameText | orderBy: 'name'">
+			{{cust.name}} - {{cust.city}}</li>
+	</ul>
+	
+	</div>
+	
+</body>
+</html>
