@@ -7,6 +7,7 @@
           <li><a ng-href="#/customers">Customers</a></li>
           <li><a ng-href="#/products">Products</a></li>
           <li><a ng-href="#/practice">Practice</a></li>
+          <li><a ng-href="#/newcustomer">New Customers</a></li>
         </ul>
         <h3 class="text-muted">Life As It Happens</h3>
       </div>
@@ -20,7 +21,7 @@
 </div>
 
 
-    <li ng-repeat="cust in customers"> {{ cust.name }} - {{ cust.city}}</li>
+    <!-- <li ng-repeat="cust in customers"> {{ cust.name }} - {{ cust.city}}</li> -->
 
   </ul>
   <br />
@@ -28,12 +29,12 @@
   
    
    
-  <ul>
+  <!-- <ul>
     <li ng-repeat="cust in customers | filter:nameText | orderBy: 'name'">
       {{ cust.name }} - {{ cust.city }}</li>
 
   </ul>
-  
+   -->
   <br />
 
 </body>

@@ -31,11 +31,11 @@ angular
       })
       .when('/customers', {
         templateUrl: 'views/customers.html',
-        controller: 'AboutCtrl'
+        controller: 'MainCtrl'
       })
       .when('/products', {
         templateUrl: 'views/products.html',
-        controller: 'AboutCtrl'
+        controller: 'ProductsCtrl'
       })
       .when('/practice', {
         templateUrl: 'views/practice.html',
