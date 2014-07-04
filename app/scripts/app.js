@@ -41,6 +41,10 @@ angular
         templateUrl: 'views/practice.html',
         controller: 'AboutCtrl'
       })
+      .when('/newcustomer', {
+        templateUrl: 'views/newcustomer.html',
+        controller: 'NewCustCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
