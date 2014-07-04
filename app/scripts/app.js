@@ -43,7 +43,7 @@ angular
       })
       .when('/newcustomer', {
         templateUrl: 'views/newcustomer.html',
-        controller: 'NewCustCtrl'
+        // controller: 'NewCustCtrl'
       })
       .otherwise({
         redirectTo: '/'

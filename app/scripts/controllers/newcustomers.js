@@ -7,13 +7,14 @@
  * # MainCtrl
  * Controller of the ngKatApp
  */
-angular.module('ngKatApp')
-    .controller('NewCustCtrl', function ($scope) {
-    		$scope.products = [
-    			{name:'Ball of Fire',price: '$2000'}, 
-    			{name:'Fiery Umbrella',price: '$3000'}, 
-    			{name:'Kissing The Lipless',price: '$1000'}, 
-    			{name:'Lonely Queen',price: '$5000'}
+// angular.module('ngKatApp')
+//     .controller('NewCustCtrl', function () {
+//     		$scope.addCustomer.push(
+//     		{
+//     			name: $scope.newCustomer.name,
+//     			city: $scope.newCustomer.city,
 
-    		];
-  });
+
+//     		});
+//   });
+
