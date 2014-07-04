@@ -6,18 +6,48 @@
 <body>
 <div class="header">
         <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#/main">Home</a></li>
           <li><a ng-href="#/about">About</a></li>
           <li><a ng-href="#/contact">Contact</a></li>
-          <li><a ng-href="#">Customers</a></li>
+          <li><a ng-href="#/customers">Customers</a></li>
           <li><a ng-href="#/products">Products</a></li>
-          <li><a ng-href="#">New Customers</a></li>
+          <li><a ng-href="#/practice">Practice</a></li>
+          <li><a ng-href="#">New</a></li>
+		 </ul>
+		 <br />
 
-        </ul>
-        <h3 class="text-muted">Life As It Happens</h3>
-      </div>
+		 <h3 class="text-muted">Life As It Happens</h3>
+		</div>
+
+    <div ng-controller="NewCustCtrl">
+    <br />
+
+		<h3>New Customers</h3>
+	<br />
+
+    
+      <br />
+      <input type="text" ng-model="filter.name"/>
+      <br />
+      <ul>
+      	<li ng-repeat="cust in customer | filter:filter.name" </li>
+      </ul>
+
+      <br />
+      Customer Name:<br />
+      <input type="text" ng-model="newCustomer.name" />
+      <br />
+      Customer City:<br />
+      <input type="text" ng-model="newCustomer.city" />
+      <br />
+      <button ng-click="addCustomer()">Add Customer</button>
+
+    </div>
 
 
 	
 </body>
 </html>
+<div class="footer">
+  <p><a href="http://kat5sc.com"><span class="glyphicon glyphicon-eye-open"></span> THEKACKIEPROJECT</a></p>
+</div>
